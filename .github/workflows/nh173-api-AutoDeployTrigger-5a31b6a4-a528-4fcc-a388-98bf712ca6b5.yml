@@ -34,8 +34,7 @@ jobs:
       - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '7.x'
-      - run: dotnet build **/*.csproj
-      - run: dotnet publish --os linux --arch x64 /t:PublishContainer -c Release
+      - run: dotnet publish **/*.csproj --os linux --arch x64 /t:PublishContainer -c Release
 
       # - name: Build and push container image to registry
       #   uses: docker/build-push-action@v2
