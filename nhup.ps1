@@ -12,3 +12,6 @@ New-AzResourceGroupDeployment `
 Write-Output "Registry created"
 
 Connect-AzContainerRegistry -Name nh173 
+
+docker push nh173.azurecr.io/api:1.0.0 
+az containerapp up --name nh173-api --image nh173.azurecr.io/api:1.0.0 --resource-group nils-hjalmarsson-173-containers --environment nh173-managedEnvironment --ingress external --target-port 80
