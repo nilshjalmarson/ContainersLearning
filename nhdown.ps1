@@ -1,0 +1,1 @@
+Remove-AzResourceGroup -Name 'nils-hjalmarsson-173-containers' -Force
