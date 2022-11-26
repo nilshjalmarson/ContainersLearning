@@ -6,7 +6,9 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2020-10
   location: location
   properties: {
     sku: {
-      name: 'Free'
+      name: 'pergb2018'
     }
   }
 }
+
+output workspaceName string = logAnalyticsWorkspace.name

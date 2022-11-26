@@ -16,3 +16,12 @@ module containerRegistry './modules/acr.bicep' = {
     systemName: systemName
   }    
 }
+
+module containerAppsEnvironment 'modules/aca.bicep' = {
+  name: '${deployment().name}-containerAppsenvironment'
+  params: {
+    location: location
+    systemName: systemName
+    logAnalytics: logAnalyticsWorkspace.outputs.workspaceName
+  }
+}
